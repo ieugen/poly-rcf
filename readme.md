@@ -27,7 +27,7 @@ Add src to you test paths in each base / component (brick).
 
 Clone this repo, change directory to it and then run `clojure -Srepro -M:poly test`
 
-If all is well, you should see output that contains: `Testing poly-rcf.rcf.src-ns`
+If all is well, you should see output that contains: `Testing poly-rcf.rcf.src-ns` . This means your test under `src/` was run as well.
 
 
 ```shell
