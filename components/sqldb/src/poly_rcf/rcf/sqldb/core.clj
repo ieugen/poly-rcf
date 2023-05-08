@@ -3,30 +3,13 @@
 (ns poly-rcf.rcf.sqldb.core
   "SQL DB client impl."
   {:authors ["Jozef Wagner"]}
-  (:require [next.jdbc :as jdbc]
-            [next.jdbc.connection :as connection]
-            [next.jdbc.result-set :as rs]
-            [next.jdbc.transaction :as transaction]
-            [clojure.tools.logging :refer [info warn trace]])
+  (:require [clojure.tools.logging :refer [info]]
+            [next.jdbc.connection :as connection])
   (:import [com.zaxxer.hikari HikariDataSource]))
-
-
-;;; HikariCP
-
-;;; HugSQL
 
 (defn get-connection
   [sqlconn]
   (or (:hikari-datasource sqlconn) sqlconn))
-
-(defn strip-update-count
-  [result]
-  (if (and (seqable? result)
-           (= 1 (count result))
-           (empty? (dissoc (first result) :next.jdbc/update-count))
-           (integer? (:next.jdbc/update-count (first result))))
-    [(:next.jdbc/update-count (first result))]
-    result))
 
 ;;; SQLDB
 
