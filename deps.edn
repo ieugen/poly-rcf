@@ -17,5 +17,5 @@
                               "-Dhyperfiddle.rcf.generate-tests=true"]
                    :extra-deps {polyfy/polylith
                                 {:git/url   "https://github.com/polyfy/polylith"
-                                 :sha       "a073b7c8dbea176a8cb39b3c4d7c3d465c99e946"
+                                 :sha       "1209a81e6b8f70987050d65d106e99d1a902969a"
                                  :deps/root "projects/poly"}}}}}
