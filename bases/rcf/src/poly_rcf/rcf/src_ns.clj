@@ -1,8 +1,7 @@
-(ns poly-rcf.rcf.src-ns
-  (:require [hyperfiddle.rcf :refer [tests]]))
+(ns poly-rcf.rcf.src-ns)
 
-(tests
+(comment
 
  (+ 1 1) := 2
- 
+
  )

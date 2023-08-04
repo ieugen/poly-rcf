@@ -1,3 +1,4 @@
+;; With the ns declaration commented out, poly tests fail
 (ns poly-rcf.rcf.config)
 ;; A master configuration file.
 ;; Can be overriden with configuration files down in the classpath,
